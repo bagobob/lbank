@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "lbank_backend": {
+      "main": "src/lbank_backend/main.mo",
+      "type": "motoko"
+    },
+    "lbank_frontend": {
+      "dependencies": [
+        "lbank_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/lbank_frontend/src/index.html"
+      },
+      "source": [
+        "src/lbank_frontend/assets",
+        "dist/lbank_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
